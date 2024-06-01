@@ -7,6 +7,7 @@ package br.ulbra.view;
 
 import java.util.Calendar;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -60,7 +61,8 @@ public class FrSigno extends javax.swing.JFrame {
         rbDivorciado = new javax.swing.JRadioButton();
         rbViuvo = new javax.swing.JRadioButton();
         lbEstadoCivil = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtIMG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -81,6 +83,7 @@ public class FrSigno extends javax.swing.JFrame {
         jPanel1.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         txtNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtNome.setForeground(new java.awt.Color(204, 0, 0));
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
@@ -230,9 +233,10 @@ public class FrSigno extends javax.swing.JFrame {
         lbEstadoCivil.setForeground(new java.awt.Color(255, 255, 255));
         lbEstadoCivil.setText("Estado Cívil");
         jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 90, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 610));
+        txtIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
+        jPanel1.add(txtIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 610));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -304,6 +308,8 @@ public class FrSigno extends javax.swing.JFrame {
                 data = "Você é do signo Áries";
             } else if (mes == 4 && dia >= 1 && dia <= 20) {
                 data = "Você é do signo Áries";
+                txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
+               // txtIMG.setIcon("//aries.png");
             } else if (mes == 4 && dia >= 21 && dia <= 30) {
                 data = "Você é do signo Touro";
             } else if (mes == 4 && dia == 31) {
@@ -413,6 +419,8 @@ public class FrSigno extends javax.swing.JFrame {
        txtDia.setText(null);
        txtMes.setText(null);
        txtAno.setText(null);
+       rbMasc.setSelected(true);
+       rbSolteiro.setSelected(true);
        JOptionPane.showMessageDialog(null, "Sessão Finalizada!");
     }//GEN-LAST:event_btLimparActionPerformed
 
@@ -464,7 +472,7 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -487,6 +495,7 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbViuvo;
     private javax.swing.JTextField txtAno;
     private javax.swing.JTextField txtDia;
+    private javax.swing.JLabel txtIMG;
     private javax.swing.JTextField txtMes;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
