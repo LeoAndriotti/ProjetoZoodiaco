@@ -83,7 +83,6 @@ public class FrSigno extends javax.swing.JFrame {
         jPanel1.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
 
         txtNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtNome.setForeground(new java.awt.Color(204, 0, 0));
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
@@ -421,6 +420,9 @@ public class FrSigno extends javax.swing.JFrame {
        txtAno.setText(null);
        rbMasc.setSelected(true);
        rbSolteiro.setSelected(true);
+       lbResumo1.setText(null);
+       lbResumo2.setText(null);
+       lbResumo3.setText(null);
        JOptionPane.showMessageDialog(null, "Sessão Finalizada!");
     }//GEN-LAST:event_btLimparActionPerformed
 
