@@ -62,7 +62,7 @@ public class FrSigno extends javax.swing.JFrame {
         rbViuvo = new javax.swing.JRadioButton();
         lbEstadoCivil = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtIMG = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -92,8 +92,8 @@ public class FrSigno extends javax.swing.JFrame {
 
         lbSexo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbSexo.setForeground(new java.awt.Color(255, 255, 255));
-        lbSexo.setText("Sexo:");
-        jPanel1.add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
+        lbSexo.setText("Sexo");
+        jPanel1.add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
 
         rbMasc.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(rbMasc);
@@ -106,14 +106,14 @@ public class FrSigno extends javax.swing.JFrame {
                 rbMascActionPerformed(evt);
             }
         });
-        jPanel1.add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 360, -1, -1));
+        jPanel1.add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
 
         rbFem.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(rbFem);
         rbFem.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         rbFem.setForeground(new java.awt.Color(255, 255, 255));
         rbFem.setText("Feminino");
-        jPanel1.add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 120, -1));
+        jPanel1.add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 120, -1));
 
         lbDia.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbDia.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,7 +151,7 @@ public class FrSigno extends javax.swing.JFrame {
                 btConsultarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 311, 150, 50));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 150, 50));
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setText("Limpar");
@@ -160,7 +160,7 @@ public class FrSigno extends javax.swing.JFrame {
                 btLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 370, 110, 40));
+        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 110, 40));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -197,7 +197,7 @@ public class FrSigno extends javax.swing.JFrame {
         rbCasado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbCasado.setForeground(new java.awt.Color(255, 255, 255));
         rbCasado.setText("Casado(a)");
-        jPanel1.add(rbCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 340, 130, -1));
+        jPanel1.add(rbCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 350, 130, -1));
 
         rbSolteiro.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbSolteiro);
@@ -205,56 +205,79 @@ public class FrSigno extends javax.swing.JFrame {
         rbSolteiro.setForeground(new java.awt.Color(255, 255, 255));
         rbSolteiro.setSelected(true);
         rbSolteiro.setText("Solteiro(a)");
-        jPanel1.add(rbSolteiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 260, 130, -1));
+        jPanel1.add(rbSolteiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, 130, -1));
 
         rbSeparado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbSeparado);
         rbSeparado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbSeparado.setForeground(new java.awt.Color(255, 255, 255));
         rbSeparado.setText("Separado(a)");
-        jPanel1.add(rbSeparado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, 140, 30));
+        jPanel1.add(rbSeparado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 430, 140, 30));
 
         rbDivorciado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbDivorciado);
         rbDivorciado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbDivorciado.setForeground(new java.awt.Color(255, 255, 255));
         rbDivorciado.setText("Divorciado(a)");
-        jPanel1.add(rbDivorciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 300, 140, -1));
+        jPanel1.add(rbDivorciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 140, -1));
 
         rbViuvo.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbViuvo);
         rbViuvo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbViuvo.setForeground(new java.awt.Color(255, 255, 255));
         rbViuvo.setText("Viúvo(a)");
-        jPanel1.add(rbViuvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 380, 130, -1));
+        jPanel1.add(rbViuvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 390, 130, -1));
 
         lbEstadoCivil.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbEstadoCivil.setForeground(new java.awt.Color(255, 255, 255));
         lbEstadoCivil.setText("Estado Cívil");
-        jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, -1, -1));
+        jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, -1));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 90, 70));
 
-        txtIMG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
-        jPanel1.add(txtIMG, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 610));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+        txtNome.setText(null);
+        txtDia.setText(null);
+        txtMes.setText(null);
+        txtAno.setText(null);
+        rbMasc.setSelected(true);
+        rbSolteiro.setSelected(true);
+        lbResumo1.setText(null);
+        lbResumo2.setText(null);
+        lbResumo3.setText(null);
+        JOptionPane.showMessageDialog(null, "Sessão Finalizada!");
+    }//GEN-LAST:event_btLimparActionPerformed
+
+    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
+        String nome, data;
+        int dia, mes, ano, nome2, num;
+        
+        nome = txtNome.getText();
+        nome2 = nomear(nome);
+        dia = Integer.parseInt(txtDia.getText());
+        mes = Integer.parseInt(txtMes.getText());
+        ano = Integer.parseInt(txtAno.getText());
+        
+        lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", do " + mes + ", de " + ano + ".");
+        lbResumo2.setText("Você tem " + calcularIdade() + " anos de idade.");
+        lbResumo3.setText(nascer() + ". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
+    }//GEN-LAST:event_btConsultarActionPerformed
 
     private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
         // TODO add your handling code here:
@@ -263,6 +286,10 @@ public class FrSigno extends javax.swing.JFrame {
     private void rbMascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMascActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rbMascActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
     public int nomear(String nome) {
         int cont = 0;
         cont = (nome.length());
@@ -298,7 +325,7 @@ public class FrSigno extends javax.swing.JFrame {
         Calendar hoje = Calendar.getInstance();
         int diaA, mesA, anoA;
         diaA = hoje.get(Calendar.DATE);
-        mesA = hoje.get(Calendar.MONTH)+1;
+        mesA = hoje.get(Calendar.MONTH) + 1;
         anoA = hoje.get(Calendar.YEAR);
         if (dia <= 0 || dia > 31 || mes <= 0 || mes > 12 || ano < 1900 || ano > anoA) {
             JOptionPane.showMessageDialog(null, "Dia, mes ou ano invalido!!");
@@ -307,8 +334,8 @@ public class FrSigno extends javax.swing.JFrame {
                 data = "Você é do signo Áries";
             } else if (mes == 4 && dia >= 1 && dia <= 20) {
                 data = "Você é do signo Áries";
-                txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
-               // txtIMG.setIcon("//aries.png");
+               // txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
+                // txtIMG.setIcon("//aries.png");
             } else if (mes == 4 && dia >= 21 && dia <= 30) {
                 data = "Você é do signo Touro";
             } else if (mes == 4 && dia == 31) {
@@ -383,48 +410,32 @@ public class FrSigno extends javax.swing.JFrame {
         String cores = cor[i];
         return cores;
     }
-    public int calcularIdade(){
+
+    public int calcularIdade() {
         int idade;
         int dia = Integer.parseInt(txtDia.getText()), mes = Integer.parseInt(txtMes.getText()), ano = Integer.parseInt(txtAno.getText());
-         Calendar hoje = Calendar.getInstance();
+        Calendar hoje = Calendar.getInstance();
         int diaA, mesA, anoA;
         diaA = hoje.get(Calendar.DATE);
-        mesA = hoje.get(Calendar.MONTH)+1;
+        mesA = hoje.get(Calendar.MONTH) + 1;
         anoA = hoje.get(Calendar.YEAR);
-        idade=((anoA*365+mesA*12+diaA)-(ano*365+mes*12+dia))/365;
-        
+        idade = ((anoA * 365 + mesA * 12 + diaA) - (ano * 365 + mes * 12 + dia)) / 365;
+
         return idade;
     }
-    private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
-        String nome, data;
-        int dia, mes, ano, nome2, num;
-        nome = txtNome.getText();
-        nome2 = nomear(nome);
 
-        dia = Integer.parseInt(txtDia.getText());
-        mes = Integer.parseInt(txtMes.getText());
-        ano = Integer.parseInt(txtAno.getText());
-        lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", do " + mes + ", de " + ano + ".");
-        lbResumo2.setText("Você tem "+calcularIdade()+" anos de idade.");
-        lbResumo3.setText(nascer()+". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
-    }//GEN-LAST:event_btConsultarActionPerformed
-
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
-
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-       txtNome.setText(null);
-       txtDia.setText(null);
-       txtMes.setText(null);
-       txtAno.setText(null);
-       rbMasc.setSelected(true);
-       rbSolteiro.setSelected(true);
-       lbResumo1.setText(null);
-       lbResumo2.setText(null);
-       lbResumo3.setText(null);
-       JOptionPane.showMessageDialog(null, "Sessão Finalizada!");
-    }//GEN-LAST:event_btLimparActionPerformed
+    public String consultarCPF(String cpf) {
+        int cont = 0;
+        String cpfAlterado = "";
+        while (cont <= 3) {
+            cpfAlterado = cpf.replaceAll("\\d", "*");
+        }
+        cont = 10;
+        while (cont <= 14) {
+            cpfAlterado = cpf.replaceAll("\\d", "*");
+        }
+        return cpfAlterado;
+    }
 
     /**
      * @param args the command line arguments
@@ -452,7 +463,7 @@ public class FrSigno extends javax.swing.JFrame {
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (IllegalAccessException ex) {
-             java.util.logging.Logger.getLogger(FrSigno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrSigno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(FrSigno.class
@@ -474,6 +485,7 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -497,7 +509,6 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbViuvo;
     private javax.swing.JTextField txtAno;
     private javax.swing.JTextField txtDia;
-    private javax.swing.JLabel txtIMG;
     private javax.swing.JTextField txtMes;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
