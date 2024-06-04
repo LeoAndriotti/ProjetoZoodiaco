@@ -565,7 +565,7 @@
               <Font name="Tahoma" size="18" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="126">
+              <StringArray count="132">
                 <StringItem index="0" value="Ano"/>
                 <StringItem index="1" value="1900"/>
                 <StringItem index="2" value="1901"/>
@@ -692,6 +692,12 @@
                 <StringItem index="123" value="2022"/>
                 <StringItem index="124" value="2023"/>
                 <StringItem index="125" value="2024"/>
+                <StringItem index="126" value="2025"/>
+                <StringItem index="127" value="2026"/>
+                <StringItem index="128" value="2027"/>
+                <StringItem index="129" value="2028"/>
+                <StringItem index="130" value="2029"/>
+                <StringItem index="131" value="2030"/>
               </StringArray>
             </Property>
           </Properties>
