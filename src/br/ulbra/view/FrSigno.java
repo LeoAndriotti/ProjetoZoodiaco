@@ -42,11 +42,8 @@ public class FrSigno extends javax.swing.JFrame {
         rbMasc = new javax.swing.JRadioButton();
         rbFem = new javax.swing.JRadioButton();
         lbDia = new javax.swing.JLabel();
-        txtDia = new javax.swing.JTextField();
         lbMes = new javax.swing.JLabel();
-        txtMes = new javax.swing.JTextField();
         lbAno = new javax.swing.JLabel();
-        txtAno = new javax.swing.JTextField();
         btConsultar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
@@ -62,6 +59,9 @@ public class FrSigno extends javax.swing.JFrame {
         rbViuvo = new javax.swing.JRadioButton();
         lbEstadoCivil = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        cbDia = new javax.swing.JComboBox<>();
+        cbMes = new javax.swing.JComboBox<>();
+        cbAno = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -120,29 +120,15 @@ public class FrSigno extends javax.swing.JFrame {
         lbDia.setText("Dia");
         jPanel1.add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
 
-        txtDia.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 43, -1));
-
         lbMes.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbMes.setForeground(new java.awt.Color(255, 255, 255));
         lbMes.setText("Mês");
-        jPanel1.add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
-
-        txtMes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtMes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMesActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 45, -1));
+        jPanel1.add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         lbAno.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbAno.setForeground(new java.awt.Color(255, 255, 255));
         lbAno.setText("Ano");
-        jPanel1.add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, -1, -1));
-
-        txtAno.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jPanel1.add(txtAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 63, -1));
+        jPanel1.add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
 
         btConsultar.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btConsultar.setText("Consultar");
@@ -151,7 +137,7 @@ public class FrSigno extends javax.swing.JFrame {
                 btConsultarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, 150, 50));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 150, 50));
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setText("Limpar");
@@ -160,37 +146,34 @@ public class FrSigno extends javax.swing.JFrame {
                 btLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 110, 40));
+        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 110, 40));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("/");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("/");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 20, 40));
 
         lbResumo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbResumo.setForeground(new java.awt.Color(255, 255, 255));
         lbResumo.setText("Resumo:");
-        jPanel1.add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 460, -1, -1));
+        jPanel1.add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, -1, -1));
 
         lbResumo1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo1.setForeground(new java.awt.Color(255, 255, 255));
-        lbResumo1.setText("Resumo");
-        jPanel1.add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, -1));
+        jPanel1.add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, -1, -1));
 
         lbResumo2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo2.setForeground(new java.awt.Color(255, 255, 255));
-        lbResumo2.setText("Resumo");
-        jPanel1.add(lbResumo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
+        jPanel1.add(lbResumo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, -1, -1));
 
         lbResumo3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo3.setForeground(new java.awt.Color(255, 255, 255));
-        lbResumo3.setText("Resumo");
-        jPanel1.add(lbResumo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, -1, -1));
+        jPanel1.add(lbResumo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, -1, -1));
 
         rbCasado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbCasado);
@@ -234,6 +217,28 @@ public class FrSigno extends javax.swing.JFrame {
         jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, -1));
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 90, 70));
 
+        cbDia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jPanel1.add(cbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, -1, -1));
+
+        cbMes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mês", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
+        cbMes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMesActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+
+        cbAno.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        cbAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ano", "1900", "1901", "1902", "1903", "1904", "1905", "1906", "1907", "1908", "1909", "1910", "1911", "1912", "1913", "1914", "1915", "1916", "1917", "1918", "1919", "1920", "1921", "1922", "1923", "1924", "1925", "1926", "1927", "1928", "1929", "1930", "1931", "1932", "1933", "1934", "1935", "1936", "1937", "1938", "1939", "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024" }));
+        cbAno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAnoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
@@ -253,9 +258,9 @@ public class FrSigno extends javax.swing.JFrame {
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
         txtNome.setText(null);
-        txtDia.setText(null);
-        txtMes.setText(null);
-        txtAno.setText(null);
+        cbDia.setSelectedIndex(0);
+        cbMes.setSelectedIndex(0);
+        cbAno.setSelectedIndex(0);
         rbMasc.setSelected(true);
         rbSolteiro.setSelected(true);
         lbResumo1.setText(null);
@@ -265,23 +270,58 @@ public class FrSigno extends javax.swing.JFrame {
     }//GEN-LAST:event_btLimparActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
-        String nome, data;
+        String nome, data, mesNome="";
         int dia, mes, ano, nome2, num;
-        
+        int[] anos = {0, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909,
+            1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919,
+            1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929,
+            1930, 1931, 1932, 1933, 1934, 1935, 1936, 1937, 1938, 1939,
+            1940, 1941, 1942, 1943, 1944, 1945, 1946, 1947, 1948, 1949,
+            1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959,
+            1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969,
+            1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979,
+            1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+            1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+            2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
+            2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
+            2020, 2021, 2022, 2023, 2024};
+
         nome = txtNome.getText();
         nome2 = nomear(nome);
-        dia = Integer.parseInt(txtDia.getText());
-        mes = Integer.parseInt(txtMes.getText());
-        ano = Integer.parseInt(txtAno.getText());
+        dia = cbDia.getSelectedIndex();
+        mes = cbMes.getSelectedIndex();
+        ano = anos[cbAno.getSelectedIndex()];
         
-        lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", do " + mes + ", de " + ano + ".");
-        lbResumo2.setText("Você tem " + calcularIdade() + " anos de idade.");
-        lbResumo3.setText(nascer() + ". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
+        if(mes==1){
+            mesNome="Janeiro";
+        }else if(mes==2){
+            mesNome="Fevereiro";
+        }else if(mes==3){
+            mesNome="Março";
+        }else if(mes==4){
+            mesNome="Abril";
+        }else if(mes==5){
+            mesNome="Maio";
+        }else if(mes==6){
+            mesNome="Junho";
+        }else if(mes==7){
+            mesNome="Julho";
+        }else if(mes==8){
+            mesNome="Agosto";
+        }else if(mes==9){
+            mesNome="Setembro";
+        }else if(mes==10){
+            mesNome="Outubro";
+        }else if(mes==11){
+            mesNome="Novembro";
+        }else if(mes==12){
+            mesNome="Dezembro";
+        }
+        
+        lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", de " + mesNome + ", de " + ano + ".");
+        lbResumo2.setText("Você tem " + calcularIdade(dia, mes, ano) + " anos de idade.");
+        lbResumo3.setText(nascer(dia, mes, ano) + ". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
     }//GEN-LAST:event_btConsultarActionPerformed
-
-    private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMesActionPerformed
 
     private void rbMascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMascActionPerformed
         // TODO add your handling code here:
@@ -290,6 +330,14 @@ public class FrSigno extends javax.swing.JFrame {
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void cbAnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbAnoActionPerformed
+
+    private void cbMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbMesActionPerformed
     public int nomear(String nome) {
         int cont = 0;
         cont = (nome.length());
@@ -319,11 +367,11 @@ public class FrSigno extends javax.swing.JFrame {
         return trato;
     }
 
-    public String nascer() {
+    public String nascer(int dia, int mes, int ano) {
         String data = "";
-        int dia = Integer.parseInt(txtDia.getText()), mes = Integer.parseInt(txtMes.getText()), ano = Integer.parseInt(txtAno.getText());
-        Calendar hoje = Calendar.getInstance();
         int diaA, mesA, anoA;
+        Calendar hoje = Calendar.getInstance();
+
         diaA = hoje.get(Calendar.DATE);
         mesA = hoje.get(Calendar.MONTH) + 1;
         anoA = hoje.get(Calendar.YEAR);
@@ -334,7 +382,7 @@ public class FrSigno extends javax.swing.JFrame {
                 data = "Você é do signo Áries";
             } else if (mes == 4 && dia >= 1 && dia <= 20) {
                 data = "Você é do signo Áries";
-               // txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
+                // txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
                 // txtIMG.setIcon("//aries.png");
             } else if (mes == 4 && dia >= 21 && dia <= 30) {
                 data = "Você é do signo Touro";
@@ -411,30 +459,17 @@ public class FrSigno extends javax.swing.JFrame {
         return cores;
     }
 
-    public int calcularIdade() {
+    public int calcularIdade(int dia, int mes, int ano) {
         int idade;
-        int dia = Integer.parseInt(txtDia.getText()), mes = Integer.parseInt(txtMes.getText()), ano = Integer.parseInt(txtAno.getText());
-        Calendar hoje = Calendar.getInstance();
         int diaA, mesA, anoA;
+        Calendar hoje = Calendar.getInstance();
+
         diaA = hoje.get(Calendar.DATE);
         mesA = hoje.get(Calendar.MONTH) + 1;
         anoA = hoje.get(Calendar.YEAR);
         idade = ((anoA * 365 + mesA * 12 + diaA) - (ano * 365 + mes * 12 + dia)) / 365;
 
         return idade;
-    }
-
-    public String consultarCPF(String cpf) {
-        int cont = 0;
-        String cpfAlterado = "";
-        while (cont <= 3) {
-            cpfAlterado = cpf.replaceAll("\\d", "*");
-        }
-        cont = 10;
-        while (cont <= 14) {
-            cpfAlterado = cpf.replaceAll("\\d", "*");
-        }
-        return cpfAlterado;
     }
 
     /**
@@ -484,6 +519,9 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.JButton btLimpar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JComboBox<String> cbAno;
+    private javax.swing.JComboBox<String> cbDia;
+    private javax.swing.JComboBox<String> cbMes;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -507,9 +545,6 @@ public class FrSigno extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbSeparado;
     private javax.swing.JRadioButton rbSolteiro;
     private javax.swing.JRadioButton rbViuvo;
-    private javax.swing.JTextField txtAno;
-    private javax.swing.JTextField txtDia;
-    private javax.swing.JTextField txtMes;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }
