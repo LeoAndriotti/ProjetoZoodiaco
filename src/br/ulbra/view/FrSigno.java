@@ -21,6 +21,7 @@ public class FrSigno extends javax.swing.JFrame {
      */
     public FrSigno() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -65,6 +66,8 @@ public class FrSigno extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MESTRE ZODI4CO");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 51));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -268,39 +271,41 @@ public class FrSigno extends javax.swing.JFrame {
         lbResumo3.setText(null);
         JOptionPane.showMessageDialog(null, "Sessão Finalizada!");
     }//GEN-LAST:event_btLimparActionPerformed
-    public String nomearMes(int mes){
-        String mesNome="";
-        if(mes==1){
-            mesNome="Janeiro";
-        }else if(mes==2){
-            mesNome="Fevereiro";
-        }else if(mes==3){
-            mesNome="Março";
-        }else if(mes==4){
-            mesNome="Abril";
-        }else if(mes==5){
-            mesNome="Maio";
-        }else if(mes==6){
-            mesNome="Junho";
-        }else if(mes==7){
-            mesNome="Julho";
-        }else if(mes==8){
-            mesNome="Agosto";
-        }else if(mes==9){
-            mesNome="Setembro";
-        }else if(mes==10){
-            mesNome="Outubro";
-        }else if(mes==11){
-            mesNome="Novembro";
-        }else if(mes==12){
-            mesNome="Dezembro";
+    public String nomearMes(int mes) {
+        String mesNome = "";
+        if (mes == 1) {
+            mesNome = "Janeiro";
+        } else if (mes == 2) {
+            mesNome = "Fevereiro";
+        } else if (mes == 3) {
+            mesNome = "Março";
+        } else if (mes == 4) {
+            mesNome = "Abril";
+        } else if (mes == 5) {
+            mesNome = "Maio";
+        } else if (mes == 6) {
+            mesNome = "Junho";
+        } else if (mes == 7) {
+            mesNome = "Julho";
+        } else if (mes == 8) {
+            mesNome = "Agosto";
+        } else if (mes == 9) {
+            mesNome = "Setembro";
+        } else if (mes == 10) {
+            mesNome = "Outubro";
+        } else if (mes == 11) {
+            mesNome = "Novembro";
+        } else if (mes == 12) {
+            mesNome = "Dezembro";
         }
         return mesNome;
     }
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
         Calendar hoje = Calendar.getInstance();
-        String nome, data, mesNome="";
-        int dia, mes, ano, nome2, num, anoA = hoje.get(Calendar.YEAR);;
+        String nome, data, mesNome = "";
+        int dia, mes, ano, nome2, num;
+        int anoA = hoje.get(Calendar.YEAR), diaA = hoje.get(Calendar.DATE), mesA = hoje.get(Calendar.MONTH) + 1;
+
         int[] anos = {0, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909,
             1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1918, 1919,
             1920, 1921, 1922, 1923, 1924, 1925, 1926, 1927, 1928, 1929,
@@ -313,34 +318,34 @@ public class FrSigno extends javax.swing.JFrame {
             1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
             2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
             2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
-            2020, 2021, 2022, 2023, 2024,2025,2026,2027,2028};
-        
+            2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030};
+
         nome = txtNome.getText();
         nome2 = nomear(nome);
         dia = cbDia.getSelectedIndex();
         mes = cbMes.getSelectedIndex();
         ano = anos[cbAno.getSelectedIndex()];
-        
-        if(ano>anoA){
-            JOptionPane.showMessageDialog(null,"Ano Inválido");
-        }
+
         if (mes == 4 && dia == 31) {
-                JOptionPane.showMessageDialog(null,"O mês informado só tem 30 dias!");
-        }else if (mes == 6 && dia == 31) {
-                JOptionPane.showMessageDialog(null, "O mês informado só tem 30 dias!");
-            }
-        else if (mes == 9 && dia == 31) {
-                JOptionPane.showMessageDialog(null,"O mês informado só tem 30 dias!");
-            }
-        else if (mes == 11 && dia == 31) {
-                JOptionPane.showMessageDialog(null,"O mês informado só tem 30 dias!");
-            }
-        else if (mes == 2 && dia >= 29) {
-              JOptionPane.showMessageDialog(null,"O mês informado só tem 28 dias!");
-            }else{
-        lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", de " + nomearMes(mes) + ", de " + ano + ".");
-        lbResumo2.setText("Você tem " + calcularIdade(dia, mes, ano) + " anos de idade.");
-        lbResumo3.setText(nascer(dia, mes, ano) + ". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
+            JOptionPane.showMessageDialog(null, "O mês informado só tem 30 dias!");
+        } else if (mes == 6 && dia == 31) {
+            JOptionPane.showMessageDialog(null, "O mês informado só tem 30 dias!");
+        } else if (mes == 9 && dia == 31) {
+            JOptionPane.showMessageDialog(null, "O mês informado só tem 30 dias!");
+        } else if (mes == 11 && dia == 31) {
+            JOptionPane.showMessageDialog(null, "O mês informado só tem 30 dias!");
+        } else if (mes == 2 && dia >= 29) {
+            JOptionPane.showMessageDialog(null, "O mês informado só tem 28 dias!");
+        } else if (ano > anoA) {
+            JOptionPane.showMessageDialog(null, "Ano Inválido");
+        } else if (ano == anoA && mes > mesA) {
+            JOptionPane.showMessageDialog(null, "Mês Inválido");
+        } else if (ano == anoA && mes == mesA && dia > diaA) {
+            JOptionPane.showMessageDialog(null, "Dia Inválido");
+        } else {
+            lbResumo1.setText(fazerTratamento() + " " + nome + ", você nasceu dia " + dia + ", de " + nomearMes(mes) + ", de " + ano + ".");
+            lbResumo2.setText("Você tem " + calcularIdade(dia, mes, ano) + " anos de idade.");
+            lbResumo3.setText(nascer(dia, mes, ano) + ". Seu número da sorte é: " + gerarNum() + ". Sua cor é: " + gerarCor());
     }//GEN-LAST:event_btConsultarActionPerformed
     }
     private void rbMascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMascActionPerformed
@@ -402,8 +407,6 @@ public class FrSigno extends javax.swing.JFrame {
                 data = "Você é do signo Áries";
             } else if (mes == 4 && dia >= 1 && dia <= 20) {
                 data = "Você é do signo Áries";
-                // txtIMG.setIcon(new ImageIcon(getClass().getResource("/img/aries.png")));
-                // txtIMG.setIcon("//aries.png");
             } else if (mes == 4 && dia >= 21 && dia <= 30) {
                 data = "Você é do signo Touro";
             } else if (mes == 5 && dia >= 1 && dia <= 20) {
