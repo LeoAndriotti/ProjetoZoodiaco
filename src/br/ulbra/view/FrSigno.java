@@ -5,9 +5,9 @@
  */
 package br.ulbra.view;
 
+
 import java.util.Calendar;
 import java.util.Random;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -59,10 +59,10 @@ public class FrSigno extends javax.swing.JFrame {
         rbDivorciado = new javax.swing.JRadioButton();
         rbViuvo = new javax.swing.JRadioButton();
         lbEstadoCivil = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         cbDia = new javax.swing.JComboBox<>();
         cbMes = new javax.swing.JComboBox<>();
         cbAno = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,7 +83,7 @@ public class FrSigno extends javax.swing.JFrame {
         lbNome.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbNome.setForeground(new java.awt.Color(255, 255, 255));
         lbNome.setText("Nome ");
-        jPanel1.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, -1, -1));
+        jPanel1.add(lbNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
 
         txtNome.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -91,12 +91,12 @@ public class FrSigno extends javax.swing.JFrame {
                 txtNomeActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 750, 35));
+        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 750, 35));
 
         lbSexo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbSexo.setForeground(new java.awt.Color(255, 255, 255));
         lbSexo.setText("Sexo");
-        jPanel1.add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
+        jPanel1.add(lbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
         rbMasc.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(rbMasc);
@@ -109,29 +109,29 @@ public class FrSigno extends javax.swing.JFrame {
                 rbMascActionPerformed(evt);
             }
         });
-        jPanel1.add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
+        jPanel1.add(rbMasc, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, -1, -1));
 
         rbFem.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup1.add(rbFem);
         rbFem.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         rbFem.setForeground(new java.awt.Color(255, 255, 255));
         rbFem.setText("Feminino");
-        jPanel1.add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 410, 120, -1));
+        jPanel1.add(rbFem, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 120, -1));
 
         lbDia.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbDia.setForeground(new java.awt.Color(255, 255, 255));
         lbDia.setText("Dia");
-        jPanel1.add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, -1, -1));
+        jPanel1.add(lbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
 
         lbMes.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbMes.setForeground(new java.awt.Color(255, 255, 255));
         lbMes.setText("Mês");
-        jPanel1.add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
+        jPanel1.add(lbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
 
         lbAno.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbAno.setForeground(new java.awt.Color(255, 255, 255));
         lbAno.setText("Ano");
-        jPanel1.add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, -1));
+        jPanel1.add(lbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         btConsultar.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         btConsultar.setText("Consultar");
@@ -140,7 +140,7 @@ public class FrSigno extends javax.swing.JFrame {
                 btConsultarActionPerformed(evt);
             }
         });
-        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 340, 150, 50));
+        jPanel1.add(btConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 310, 150, 50));
 
         btLimpar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btLimpar.setText("Limpar");
@@ -149,41 +149,41 @@ public class FrSigno extends javax.swing.JFrame {
                 btLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 410, 110, 40));
+        jPanel1.add(btLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 380, 110, 40));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("/");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 270, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("/");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 20, 40));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 20, 40));
 
         lbResumo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbResumo.setForeground(new java.awt.Color(255, 255, 255));
         lbResumo.setText("Resumo:");
-        jPanel1.add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 500, -1, -1));
+        jPanel1.add(lbResumo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
 
         lbResumo1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, -1, -1));
+        jPanel1.add(lbResumo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 550, -1, -1));
 
         lbResumo2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo2.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(lbResumo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, -1, -1));
+        jPanel1.add(lbResumo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 580, -1, -1));
 
         lbResumo3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lbResumo3.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(lbResumo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 610, -1, -1));
+        jPanel1.add(lbResumo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 610, -1, -1));
 
         rbCasado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbCasado);
         rbCasado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbCasado.setForeground(new java.awt.Color(255, 255, 255));
         rbCasado.setText("Casado(a)");
-        jPanel1.add(rbCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 350, 130, -1));
+        jPanel1.add(rbCasado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 320, 130, -1));
 
         rbSolteiro.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbSolteiro);
@@ -191,38 +191,37 @@ public class FrSigno extends javax.swing.JFrame {
         rbSolteiro.setForeground(new java.awt.Color(255, 255, 255));
         rbSolteiro.setSelected(true);
         rbSolteiro.setText("Solteiro(a)");
-        jPanel1.add(rbSolteiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 270, 130, -1));
+        jPanel1.add(rbSolteiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 240, 130, -1));
 
         rbSeparado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbSeparado);
         rbSeparado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbSeparado.setForeground(new java.awt.Color(255, 255, 255));
         rbSeparado.setText("Separado(a)");
-        jPanel1.add(rbSeparado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 430, 140, 30));
+        jPanel1.add(rbSeparado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 140, 30));
 
         rbDivorciado.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbDivorciado);
         rbDivorciado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbDivorciado.setForeground(new java.awt.Color(255, 255, 255));
         rbDivorciado.setText("Divorciado(a)");
-        jPanel1.add(rbDivorciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 140, -1));
+        jPanel1.add(rbDivorciado, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 280, 140, -1));
 
         rbViuvo.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroup2.add(rbViuvo);
         rbViuvo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbViuvo.setForeground(new java.awt.Color(255, 255, 255));
         rbViuvo.setText("Viúvo(a)");
-        jPanel1.add(rbViuvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 390, 130, -1));
+        jPanel1.add(rbViuvo, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 130, -1));
 
         lbEstadoCivil.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lbEstadoCivil.setForeground(new java.awt.Color(255, 255, 255));
         lbEstadoCivil.setText("Estado Cívil");
-        jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, -1));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 90, 70));
+        jPanel1.add(lbEstadoCivil, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, -1, -1));
 
         cbDia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         cbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dia", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jPanel1.add(cbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, -1, -1));
+        jPanel1.add(cbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         cbMes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         cbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mês", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
@@ -231,7 +230,7 @@ public class FrSigno extends javax.swing.JFrame {
                 cbMesActionPerformed(evt);
             }
         });
-        jPanel1.add(cbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, -1, -1));
+        jPanel1.add(cbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, -1, -1));
 
         cbAno.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         cbAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ano", "1900", "1901", "1902", "1903", "1904", "1905", "1906", "1907", "1908", "1909", "1910", "1911", "1912", "1913", "1914", "1915", "1916", "1917", "1918", "1919", "1920", "1921", "1922", "1923", "1924", "1925", "1926", "1927", "1928", "1929", "1930", "1931", "1932", "1933", "1934", "1935", "1936", "1937", "1938", "1939", "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030" }));
@@ -240,7 +239,11 @@ public class FrSigno extends javax.swing.JFrame {
                 cbAnoActionPerformed(evt);
             }
         });
-        jPanel1.add(cbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, -1, -1));
+        jPanel1.add(cbAno, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/neymar.gif"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 450, 250, 200));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/zodiaco1.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
